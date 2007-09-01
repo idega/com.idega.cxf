@@ -11,7 +11,7 @@
   <groupId>com.idega.block.platform</groupId>
   <name>CXF Integration</name>
   <artifactId>com.idega.cxf</artifactId>
-  <version>2.0.1</version>
+  <version>${com.idega.block.platform-com.idega.cxf-version}</version>
   <inceptionYear>2007</inceptionYear>
   <description>Integration of the CXF WebServices engine into idegaWeb ePlatorm. CXF is the successor of xfire.</description>
   <scm>
@@ -120,4 +120,32 @@
       <type>jar</type>
     </dependency>
   </dependencies>
+<!--  
+  <build>
+    <plugins>
+	  <plugin>
+		<groupId>org.apache.cxf</groupId>
+		<artifactId>cxf-codegen-plugin</artifactId>
+		<version>2.0.1-incubator</version>
+		<executions>
+			<execution>
+				<id>generate-sources</id>
+				<phase>generate-sources</phase>
+				<configuration>
+					<sourceRoot>${basedir}/generated/src/java</sourceRoot>
+					<wsdlOptions>
+						<wsdlOption>
+							<wsdl>${basedir}/src/java/com/idega/cxf/test/service/HelloSpring.wsdl</wsdl>
+						</wsdlOption>
+					</wsdlOptions>
+				</configuration>
+				<goals>
+					<goal>wsdl2java</goal>
+				</goals>
+			</execution>
+		</executions>
+	  </plugin>
+    </plugins>
+  </build>
+-->
 </project>

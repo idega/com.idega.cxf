@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:ns1="http://service.test.cxf.idega.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HelloSpringImplService" targetNamespace="http://service.test.cxf.idega.com/">
+  <wsdl:types>
+<xsd:schema xmlns="http://service.test.cxf.idega.com/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://service.test.cxf.idega.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="sayHi" type="sayHi"/>
+<xsd:complexType name="sayHi">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="arg0" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="sayHiResponse" type="sayHiResponse"/>
+<xsd:complexType name="sayHiResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="return" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+            <xsd:element name="sendXml">
+            	<xsd:complexType>
+            		<xsd:sequence>
+            			<xsd:element name="in" type="xsd:hexBinary"></xsd:element>
+            		</xsd:sequence>
+            	</xsd:complexType>
+            </xsd:element>
+            <xsd:element name="sendXmlResponse">
+            	<xsd:complexType>
+            		<xsd:sequence>
+            			<xsd:element name="out" type="xsd:string"></xsd:element>
+            		</xsd:sequence>
+            	</xsd:complexType>
+            </xsd:element>
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="sayHi">
+    <wsdl:part element="ns1:sayHi" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="sayHiResponse">
+    <wsdl:part element="ns1:sayHiResponse" name="result"/>
+  </wsdl:message>
+  <wsdl:message name="sendXmlRequest">
+  	<wsdl:part name="parameters" element="ns1:sendXml"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendXmlResponse">
+  	<wsdl:part name="parameters" element="ns1:sendXmlResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="HelloSpring">
+    <wsdl:operation name="sayHi">
+      <wsdl:input message="ns1:sayHi" name="sayHi"/>
+      <wsdl:output message="ns1:sayHiResponse" name="sayHiResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="sendXml">
+    	<wsdl:input message="ns1:sendXmlRequest"></wsdl:input>
+    	<wsdl:output message="ns1:sendXmlResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HelloSpringImplServiceSoapBinding" type="ns1:HelloSpring">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="sayHi">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sayHi">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sayHiResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HelloSpringImplService">
+    <wsdl:port binding="ns1:HelloSpringImplServiceSoapBinding" name="HelloSpringImplPort">
+      <soap:address location="http://localhost:8080/cxservices/HelloSpring"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

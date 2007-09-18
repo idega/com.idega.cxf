@@ -9,4 +9,5 @@ import com.idega.business.SpringBeanName;
 public interface HelloSpring {
 
 	public String sayHi(String text);
+	public String sendNode(byte[] node);
 }

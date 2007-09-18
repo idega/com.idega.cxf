@@ -14,7 +14,17 @@ http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
 	<jaxws:endpoint 
 	  id="helloSpring" 
 	  implementor="com.idega.cxf.test.service.HelloSpringImpl" 
-	  address="/HelloSpring" />
+	  address="/HelloSpring">
+  	  <jaxws:properties>
+        <entry key="mtom-enabled" value="true"/>
+      </jaxws:properties>
+    </jaxws:endpoint>
+	  
+	  
+    <jaxws:endpoint 
+	  id="testSendXml" 
+	  implementor="com.idega.cxf.test.service.TestSendXmlImpl" 
+	  address="/testSendXml" />
 	  
     <bean id="helloSpringClient" class="com.idega.cxf.test.service.HelloSpring" 
       factory-bean="clientFactory" factory-method="create"/>

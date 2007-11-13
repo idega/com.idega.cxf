@@ -3,7 +3,6 @@ package com.idega.cxf.test.service;
 import java.io.ByteArrayInputStream;
 
 import javax.jws.WebService;
-import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.apache.cxf.helpers.DOMUtils;
 import org.w3c.dom.Document;

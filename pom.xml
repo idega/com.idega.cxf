@@ -19,9 +19,8 @@
     <connection>scm:cvs:ext:${user.name}@code.idega.com:/idega/cvs:${groupId}/${artifactId}/</connection>
     <developerConnection>scm:cvs:ext:${user.name}@code.idega.com:/idega/cvs:${groupId}/${artifactId}/</developerConnection> 
     -->
-    <connection>scm:cvs:ext:${user.name}@code.idega.com:/idega/cvs:${groupId}/${artifactId}/</connection>
-    <developerConnection>scm:cvs:ext:${user.name}@code.idega.com:/idega/cvs:${groupId}/${artifactId}/</developerConnection>
-    <tag>com_idega_cxf-4_0_0</tag>
+    <connection>scm:cvs:ext:civilis@code.idega.com:/idega/cvs:com.idega.block.platform/com.idega.cxf/</connection>
+    <developerConnection>scm:cvs:ext:civilis@code.idega.com:/idega/cvs:com.idega.block.platform/com.idega.cxf/</developerConnection>
   </scm>
 
   <developers>

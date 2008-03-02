@@ -110,7 +110,7 @@
     <dependency>
       <groupId>stax</groupId>
       <artifactId>stax-api</artifactId>
-      <version>1.0.1</version>
+      <version>${stax-stax-api-version}</version>
       <type>jar</type>
     </dependency>
     <dependency>

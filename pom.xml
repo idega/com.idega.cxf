@@ -58,7 +58,7 @@
     <dependency>
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-bundle</artifactId>
-      <version>2.0.1-incubator</version>
+      <version>2.0.4-incubator</version>
       <type>jar</type>
     </dependency>
     <dependency>

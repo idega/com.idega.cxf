@@ -7,6 +7,7 @@
 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
 http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
 
+<!--  
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
@@ -33,5 +34,6 @@ http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
 	  <property name="serviceClass" value="com.idega.cxf.test.service.HelloSpring"/>
 	  <property name="address" value="http://localhost:8080/cxservices/HelloSpring"/>
 	</bean>
+-->
 	
 </beans>

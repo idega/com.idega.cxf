@@ -55,12 +55,14 @@
       <version>1.0-M1</version>
       <type>jar</type>
     </dependency>
+    <!--  
     <dependency>
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-bundle</artifactId>
       <version>2.0.4-incubator</version>
       <type>jar</type>
     </dependency>
+    -->
     <dependency>
       <groupId>xml-resolver</groupId>
       <artifactId>xml-resolver</artifactId>

@@ -17,7 +17,7 @@ public class HelloSpringImpl implements HelloSpring {
 		
 		try {
 			
-			ByteArrayInputStream is = new ByteArrayInputStream(node);
+			/*ByteArrayInputStream is =*/ new ByteArrayInputStream(node);
 			//Document doc = DOMUtils.readXml(is);
 //			System.out.println("doc: "+doc);
 //			System.out.println("fword: "+doc.getDocumentElement().getNodeName());

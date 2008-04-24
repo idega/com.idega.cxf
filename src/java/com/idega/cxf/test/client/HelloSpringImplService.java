@@ -46,7 +46,8 @@ public class HelloSpringImplService extends Service {
      * @return
      *     returns HelloSpringImplPort
      */
-    @WebEndpoint(name = "HelloSpringImplPort")
+    @SuppressWarnings("cast")
+		@WebEndpoint(name = "HelloSpringImplPort")
     public HelloSpring getHelloSpringImplPort() {
         return (HelloSpring)super.getPort(HelloSpringImplPort, HelloSpring.class);
     }
